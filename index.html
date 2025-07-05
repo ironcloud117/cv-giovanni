@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -21,10 +20,23 @@
             background: #f8f9fa;
         }
         
+        /* Banner */
+        .banner {
+            width: 100%;
+            text-align: center;
+            background: white;
+        }
+        
+        .banner img {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+        }
+        
         /* Container */
         .container {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 20px auto 40px auto;
             padding: 0 20px;
             background: white;
             border-radius: 10px;
@@ -240,6 +252,11 @@
     </style>
 </head>
 <body>
+    <!-- Banner -->
+    <div class="banner">
+        <img src="banner.png" alt="Banner">
+    </div>
+
     <!-- Language Toggle -->
     <div class="language-toggle">
         <button class="lang-btn active" onclick="switchLanguage('it')" aria-label="Italiano">IT</button>
@@ -580,4 +597,3 @@
     </script>
 </body>
 </html>
-```
