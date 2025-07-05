@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanni Adinolfi - Cloud Architect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .banner {
+            position: relative;
+            height: 260px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1a237e;
+        }
+
+        .banner-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .profile-pic {
+            z-index: 1;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header h2 {
+            font-size: 1.3em;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info span {
+            font-size: 0.9em;
+        }
+
+        .aws-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="banner.png" alt="Banner" class="banner-img">
+        <img src="profile.jpg" alt="Giovanni Adinolfi" class="profile-pic">
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>GIOVANNI ADINOLFI</h1>
+            <h2>Cloud Architect & AWS Solutions Specialist</h2>
+            <div class="contact-info">
+                <span>📍 Via Posidonia 161/6, 84128 Salerno - Italy</span>
+                <span>📞 +39 3517606640</span>
+                <span>✉️ giovanni.adinolfi@live.it</span>
+            </div>
+            <div class="aws-badges">
+                <span class="badge">AWS Solutions Architect</span>
+                <span class="badge">AWS Developer</span>
+                <span class="badge">AWS Security Specialty</span>
+                <span class="badge">AWS Cloud Practitioner</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
