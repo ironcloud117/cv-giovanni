@@ -1,9 +1,11 @@
-
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Giovanni Adinolfi - Cloud Architect e AWS Solutions Specialist con 25+ anni di esperienza IT">
+    <meta name="keywords" content="Cloud Architect, AWS, Solutions Architect, DevOps, Kubernetes, Terraform">
     <title>Giovanni Adinolfi - Cloud Architect</title>
     <style>
         * {
@@ -11,14 +13,15 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
             background: #f8f9fa;
         }
-
+        
+        /* Banner Section */
         .banner {
             position: relative;
             height: 260px;
@@ -28,7 +31,7 @@
             align-items: center;
             background: #1a237e;
         }
-
+        
         .banner-img {
             position: absolute;
             width: 100%;
@@ -39,7 +42,7 @@
             left: 0;
             z-index: 0;
         }
-
+        
         .profile-pic {
             z-index: 1;
             width: 140px;
@@ -49,33 +52,35 @@
             object-fit: cover;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-
+        
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             background: white;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-
+        
+        /* Header */
         .header {
             background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
             color: white;
             padding: 40px;
             text-align: center;
         }
-
+        
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
             letter-spacing: 2px;
         }
-
+        
         .header h2 {
             font-size: 1.3em;
             font-weight: 300;
             margin-bottom: 20px;
         }
-
+        
         .contact-info {
             display: flex;
             justify-content: center;
@@ -83,11 +88,11 @@
             margin-top: 20px;
             flex-wrap: wrap;
         }
-
+        
         .contact-info span {
             font-size: 0.9em;
         }
-
+        
         .aws-badges {
             display: flex;
             justify-content: center;
@@ -95,7 +100,7 @@
             margin-top: 20px;
             flex-wrap: wrap;
         }
-
+        
         .badge {
             background: rgba(255,255,255,0.2);
             padding: 8px 15px;
@@ -103,30 +108,609 @@
             font-size: 0.8em;
             font-weight: bold;
         }
+        
+        /* Content Layout */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            padding: 40px;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .main-content {
+            padding: 0 20px;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h3 {
+            color: #1a237e;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #1a237e;
+            padding-bottom: 10px;
+        }
+        
+        /* Experience Items */
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #1a237e;
+        }
+        
+        .job-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .period {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .achievements {
+            list-style: none;
+        }
+        
+        .achievements li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .achievements li:before {
+            content: "▶";
+            color: #1a237e;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .skill-category h4 {
+            color: #1a237e;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 3px 0;
+            font-size: 0.9em;
+        }
+        
+        /* Certifications */
+        .cert-item {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .cert-name {
+            font-weight: bold;
+            color: #1a237e;
+        }
+        
+        .cert-date {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        /* Language Toggle */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .lang-btn {
+            background: #1a237e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .lang-btn:hover {
+            background: #3949ab;
+        }
+        
+        .lang-btn.active {
+            background: #3949ab;
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .banner {
+                height: 200px;
+            }
+            
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .aws-badges {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .language-toggle {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .lang-btn {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .sidebar {
+                padding: 20px;
+            }
+            
+            .main-content {
+                padding: 0;
+            }
+            
+            .experience-item {
+                padding: 15px;
+            }
+            
+            .section h3 {
+                font-size: 1.2em;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button class="lang-btn active" onclick="switchLanguage('it')" aria-label="Italiano">IT</button>
+        <button class="lang-btn" onclick="switchLanguage('en')" aria-label="English">EN</button>
+    </div>
+
+    <!-- Banner with Profile Picture -->
     <div class="banner">
         <img src="banner.png" alt="Banner" class="banner-img">
-        <img src="profile.jpg" alt="Giovanni Adinolfi" class="profile-pic">
+        <img src="profile.jpeg" alt="Giovanni Adinolfi" class="profile-pic">
     </div>
 
     <div class="container">
-        <div class="header">
-            <h1>GIOVANNI ADINOLFI</h1>
-            <h2>Cloud Architect & AWS Solutions Specialist</h2>
-            <div class="contact-info">
-                <span>📍 Via Posidonia 161/6, 84128 Salerno - Italy</span>
-                <span>📞 +39 3517606640</span>
-                <span>✉️ giovanni.adinolfi@live.it</span>
+        <!-- VERSIONE ITALIANA -->
+        <div id="it-content" class="lang-content active">
+            <div class="header">
+                <h1>GIOVANNI ADINOLFI</h1>
+                <h2>Cloud Architect & AWS Solutions Specialist</h2>
+                <div class="contact-info">
+                    <span>📍 Via Posidonia 161/6, 84128 Salerno - Italy</span>
+                    <span>📞 +39 3517606640</span>
+                    <span>✉️ giovanni.adinolfi@live.it</span>
+                </div>
+                <div class="aws-badges">
+                    <span class="badge">AWS Solutions Architect</span>
+                    <span class="badge">AWS Developer</span>
+                    <span class="badge">AWS Security Specialty</span>
+                    <span class="badge">AWS Cloud Practitioner</span>
+                </div>
             </div>
-            <div class="aws-badges">
-                <span class="badge">AWS Solutions Architect</span>
-                <span class="badge">AWS Developer</span>
-                <span class="badge">AWS Security Specialty</span>
-                <span class="badge">AWS Cloud Practitioner</span>
+
+            <div class="content">
+                <aside class="sidebar">
+                    <div class="section">
+                        <h3>Profile</h3>
+                        <p>Cloud Architect con 25+ anni di esperienza IT e 4 certificazioni AWS. Specializzato in trasformazione digitale, migrazione cloud e ottimizzazione infrastrutture per settori enterprise e sanità pubblica.</p>
+                    </div>
+
+                    <div class="section">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-category">
+                            <h4>Cloud & DevOps</h4>
+                            <ul>
+                                <li>AWS (EC2, RDS, S3, VPC, IAM)</li>
+                                <li>Azure DevOps, Terraform</li>
+                                <li>Kubernetes, Docker</li>
+                                <li>CI/CD Pipelines</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Database & Analytics</h4>
+                            <ul>
+                                <li>MySQL, SQL Server, Oracle</li>
+                                <li>AWS Glue, Athena, QuickSight</li>
+                                <li>Database Migration</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Enterprise Systems</h4>
+                            <ul>
+                                <li>SAP Business One</li>
+                                <li>ERP Implementation</li>
+                                <li>ServiceNow</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>Certificazioni AWS</h3>
+                        <div class="cert-item">
+                            <div class="cert-name">AWS Certified Security - Specialty</div>
+                            <div class="cert-date">Dicembre 2024</div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-name">AWS Certified Developer - Associate</div>
+                            <div class="cert-date">Aprile 2024</div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-name">AWS Certified Solutions Architect</div>
+                            <div class="cert-date">Febbraio 2024</div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-name">AWS Certified Cloud Practitioner</div>
+                            <div class="cert-date">Novembre 2023</div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>Formazione</h3>
+                        <p><strong>Laurea in Scienze Politiche</strong><br>
+                        Università degli Studi di Salerno<br>
+                        <em>Indirizzo Economico (1989)</em></p>
+                        <p><strong>Certificate of Advanced English (CAE)</strong><br>
+                        Cambridge University<br>
+                        <em>British Council, Napoli</em></p>
+                    </div>
+                </aside>
+
+                <main class="main-content">
+                    <div class="section">
+                        <h3>Esperienza Professionale</h3>
+
+                        <div class="experience-item">
+                            <div class="job-title">Cloud Architect - Freelance (P.IVA)</div>
+                            <div class="company">Codeway SA, Chiasso (Svizzera)</div>
+                            <div class="period">Giugno 2025 - Presente | Presso Innovaway - Contratto scadenza 31.12.2025 | Full Remote</div>
+                            <ul class="achievements">
+                                <li><strong>Progetto Sanità Pubblica Lombardia:</strong> Migrazione ambienti IT on-premise verso AWS per sistema sanitario regionale</li>
+                                <li><strong>Architecture Design:</strong> Progettazione architetture cloud scalabili e sicure in compliance con Aria S.p.A.</li>
+                                <li><strong>Database Migration:</strong> Migrazione database multi-platform (Linux, Windows, Oracle/MySQL/SQL Server)</li>
+                                <li><strong>Team Coordination:</strong> Gestione team cross-funzionali e workflow ServiceNow</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Cloud Architect</div>
+                            <div class="company">Multiversity S.p.A., Napoli</div>
+                            <div class="period">Giugno 2024 - Giugno 2025 | Modalità Ibrida</div>
+                            <ul class="achievements">
+                                <li><strong>Cost Optimization Results:</strong> Risparmio di €20k+ (Marzo-Aprile 2025) tramite rightsizing istanze e scheduling avanzato</li>
+                                <li><strong>Advanced Analytics:</strong> Implementazione tagging avanzato e cloud intelligent dashboard per analisi dati e monitoraggio costi</li>
+                                <li><strong>Database Migration:</strong> Migrazione Aurora MySQL 5.7→8.0 con zero downtime e ottimizzazione performance</li>
+                                <li><strong>Security & Compliance:</strong> Deploy AWS Security Hub e implementazione best practices per settore education</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Cloud Engineer</div>
+                            <div class="company">EEtech SRLS, Bologna</div>
+                            <div class="period">Febbraio 2024 - Giugno 2024 | Full Remote</div>
+                            <ul class="achievements">
+                                <li><strong>Azure Automation:</strong> Implementazione Azure DevOps e Terraform per automazione</li>
+                                <li><strong>Kubernetes Management:</strong> Configurazione cluster AKS e pipeline CI/CD</li>
+                                <li><strong>Cost Analysis:</strong> Sviluppo tool analisi costi multi-cloud (Azure/AWS)</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">IT Manager</div>
+                            <div class="company">Sundall S.r.l.</div>
+                            <div class="period">Gennaio 2014 - Giugno 2023 | On Site</div>
+                            <ul class="achievements">
+                                <li><strong>Cloud Migration:</strong> Prima migrazione workload on-premise → AWS con S3 storage</li>
+                                <li><strong>Infrastructure:</strong> Setup call center VoIP e soluzioni storage ibrido</li>
+                                <li><strong>Data Analytics:</strong> Implementazione pipeline AWS Glue + Athena + QuickSight</li>
+                                <li><strong>Network & Security:</strong> Gestione rete aziendale e configurazione VPN</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Project Manager ERP</div>
+                            <div class="company">Engineering Service Srl, Roma</div>
+                            <div class="period">2012 - 2014 | On Site</div>
+                            <ul class="achievements">
+                                <li><strong>SAP Implementation:</strong> Deploy e customizzazione SAP Business One enterprise</li>
+                                <li><strong>Training & Support:</strong> Formazione utenti e supporto sistemistico</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Consulente Tecnico ERP</div>
+                            <div class="company">Quasar Sas, Salerno</div>
+                            <div class="period">1998 - 2011 | On Site</div>
+                            <ul class="achievements">
+                                <li><strong>Database Expertise:</strong> Amministrazione SQL Server e gestionale MxW SQL</li>
+                                <li><strong>Client Solutions:</strong> Implementazione ERP personalizzate per 50+ clienti</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Esperienza Internazionale</div>
+                            <div class="company">Regno Unito</div>
+                            <div class="period">1998 - 2003 | On Site</div>
+                            <ul class="achievements">
+                                <li><strong>Customer Service:</strong> Accettazione clienti e help desk turistici</li>
+                                <li><strong>Hospitality:</strong> Esperienza nel settore ristorazione</li>
+                                <li><strong>Language Skills:</strong> Perfezionamento competenze linguistiche inglese</li>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- VERSIONE INGLESE -->
+        <div id="en-content" class="lang-content">
+            <div class="header">
+                <h1>GIOVANNI ADINOLFI</h1>
+                <h2>Cloud Architect & AWS Solutions Specialist</h2>
+                <div class="contact-info">
+                    <span>📍 Via Posidonia 161/6, 84128 Salerno - Italy</span>
+                    <span>📞 +39 3517606640</span>
+                    <span>✉️ giovanni.adinolfi@live.it</span>
+                </div>
+                <div class="aws-badges">
+                    <span class="badge">AWS Solutions Architect</span>
+                    <span class="badge">AWS Developer</span>
+                    <span class="badge">AWS Security Specialty</span>
+                    <span class="badge">AWS Cloud Practitioner</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <aside class="sidebar">
+                    <div class="section">
+                        <h3>Profile</h3>
+                        <p>Cloud Architect with 25+ years IT experience and 4 AWS certifications. Specialized in digital transformation, cloud migration, and infrastructure optimization for enterprise and public healthcare sectors.</p>
+                    </div>
+
+                    <div class="section">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-category">
+                            <h4>Cloud & DevOps</h4>
+                            <ul>
+                                <li>AWS (EC2, RDS, S3, VPC, IAM)</li>
+                                <li>Azure DevOps, Terraform</li>
+                                <li>Kubernetes, Docker</li>
+                                <li>CI/CD Pipelines</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Database & Analytics</h4>
+                            <ul>
+                                <li>MySQL, SQL Server, Oracle</li>
+                                <li>AWS Glue, Athena, QuickSight</li>
+                                <li>Database Migration</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Enterprise Systems</h4>
+                            <ul>
+                                <li>SAP Business One</li>
+                                <li>ERP Implementation</li>
+                                <li>ServiceNow</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>AWS Certifications</h3>
+                        <div class="cert-item">
+                            <div class="cert-name">AWS Certified Security - Specialty</div>
+                            <div class="cert-date">December 2024</div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-name">AWS Certified Developer - Associate</div>
+                            <div class="cert-date">April 2024</div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-name">AWS Certified Solutions Architect</div>
+                            <div class="cert-date">February 2024</div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-name">AWS Certified Cloud Practitioner</div>
+                            <div class="cert-date">November 2023</div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>Education</h3>
+                        <p><strong>Bachelor's Degree in Political Science</strong><br>
+                        University of Salerno<br>
+                        <em>Economics Focus (1989)</em></p>
+                        <p><strong>Certificate of Advanced English (CAE)</strong><br>
+                        Cambridge University<br>
+                        <em>British Council, Naples</em></p>
+                    </div>
+                </aside>
+
+                <main class="main-content">
+                    <div class="section">
+                        <h3>Professional Experience</h3>
+
+                        <div class="experience-item">
+                            <div class="job-title">Cloud Architect - Freelance (VAT)</div>
+                            <div class="company">Codeway SA, Chiasso (Switzerland)</div>
+                            <div class="period">June 2025 - Present | At Innovaway - Contract expires 31.12.2025 | Full Remote</div>
+                            <ul class="achievements">
+                                <li><strong>Lombardy Public Healthcare:</strong> On-premise to AWS migration for regional healthcare system</li>
+                                <li><strong>Architecture Design:</strong> Scalable and secure cloud architecture design compliant with Aria S.p.A. guidelines</li>
+                                <li><strong>Database Migration:</strong> Multi-platform database migration (Linux, Windows, Oracle/MySQL/SQL Server)</li>
+                                <li><strong>Team Coordination:</strong> Cross-functional team management and ServiceNow workflow integration</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Cloud Architect</div>
+                            <div class="company">Multiversity S.p.A., Naples</div>
+                            <div class="period">June 2024 - June 2025 | Hybrid Mode</div>
+                            <ul class="achievements">
+                                <li><strong>Cost Optimization Results:</strong> €20k+ savings (March-April 2025) through instance rightsizing and advanced scheduling</li>
+                                <li><strong>Advanced Analytics:</strong> Advanced tagging and cloud intelligent dashboard implementation for data analysis and cost monitoring</li>
+                                <li><strong>Database Migration:</strong> Aurora MySQL 5.7→8.0 migration with zero downtime and performance optimization</li>
+                                <li><strong>Security & Compliance:</strong> AWS Security Hub deployment and best practices implementation for education sector</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">Cloud Engineer</div>
+                            <div class="company">EEtech SRLS, Bologna</div>
+                            <div class="period">February 2024 - June 2024 | Full Remote</div>
+                            <ul class="achievements">
+                                <li><strong>Azure Automation:</strong> Azure DevOps and Terraform implementation for infrastructure automation</li>
+                                <li><strong>Kubernetes Management:</strong> AKS cluster configuration and CI/CD pipeline deployment</li>
+                                <li><strong>Cost Analysis:</strong> Multi-cloud cost analysis tools development (Azure/AWS)</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">IT Manager</div>
+                            <div class="company">Sundall S.r.l.</div>
+                            <div class="period">January 2014 - June 2023 | On Site</div>
+                            <ul class="achievements">
+                                <li><strong>Cloud Migration:</strong> First on-premise to AWS workload migration with S3 storage implementation</li>
+                                <li><strong>Infrastructure:</strong> VoIP call center setup and hybrid storage solutions</li>
+                                <li><strong>Data Analytics:</strong> AWS Glue + Athena + QuickSight pipeline implementation</li>
+                                <li><strong>Network & Security:</strong> Corporate network management and VPN configuration</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">ERP Project Manager</div>
+                            <div class="company">Engineering Service Srl, Rome</div>
+                            <div class="period">2012 - 2014 | On Site</div>
+                            <ul class="achievements">
+                                <li><strong>SAP Implementation:</strong> Enterprise SAP Business One deployment and customization</li>
+                                <li><strong>Training & Support:</strong> User training and system support optimization</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">ERP Technical Consultant</div>
+                            <div class="company">Quasar Sas, Salerno</div>
+                            <div class="period">1998 - 2011 | On Site</div>
+                            <ul class="achievements">
+                                <li><strong>Database Expertise:</strong> SQL Server administration and MxW SQL system management</li>
+                                <li><strong>Client Solutions:</strong> Custom ERP implementations for 50+ clients</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="job-title">International Experience</div>
+                            <div class="company">United Kingdom</div>
+                            <div class="period">1998 - 2003 | On Site</div>
+                            <ul class="achievements">
+                                <li><strong>Customer Service:</strong> Client reception and tourist help desk services</li>
+                                <li><strong>Hospitality:</strong> Restaurant and hospitality sector experience</li>
+                                <li><strong>Language Skills:</strong> Advanced English language proficiency development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
             </div>
         </div>
     </div>
+
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show selected language content
+            document.getElementById(lang + '-content').classList.add('active');
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
+```
